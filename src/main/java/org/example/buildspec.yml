@@ -1,15 +1,14 @@
 version: 0.2
 
-phases:
-  install:
-    runtime-versions:
-      java: corretto17
+env:
+  secrets-manager:
+    DATABASE_PASS: "my-app-secret:DB_PASSWORD"
 
+phases:
   build:
     commands:
-      - echo "Build Started"
-      - mvn clean package
+      - echo "Build Successful"
 
 artifacts:
   files:
-    - target/*.jar
+    - '**/*'
