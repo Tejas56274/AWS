@@ -7,6 +7,7 @@ env:
 phases:
   build:
     commands:
+      - echo "Hello AWS"
       - echo "Build Successful"
 
 artifacts:
